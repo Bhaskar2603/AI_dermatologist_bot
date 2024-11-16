@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,5 +56,203 @@
         <p>Get personalized skincare and haircare recommendations</p>
         <button onclick="window.location.href='https://huggingface.co/spaces/Bhaskar2611/AI_Dermatologist_Chatbot_'">Open AI Dermatologist Chatbot</button>
     </div>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dermatologist</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f8ff, #e6fffa);
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            color: #2d6a4f;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideInTop 1s ease-out;
+        }
+
+        .page-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #2d6a4f;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .chatbot-button {
+            background-color: #f28d35;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            animation: popUp 2s infinite alternate;
+        }
+
+        .chatbot-button:hover {
+            background-color: #f67c28;
+        }
+
+        .nav-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-buttons button {
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-buttons button:hover {
+            transform: scale(1.1);
+            background-color: #3b8d6e;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popUp {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button onclick="showContent('skin')">Skin</button>
+        <button onclick="showContent('hair')">Hair</button>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <h1 id="main-title">AI Dermatologist</h1>
+
+        <!-- Skin Page Content -->
+        <div id="skin" class="page-content">
+            <h2>Skin Care Information</h2>
+            <ul>
+                <li>Get personalized skincare tips based on your skin type and concerns.</li>
+                <li>Learn about potential skin conditions and their causes.</li>
+                <li>Get information about skincare products and compare them.</li>
+                <li>Get advice on building a good skincare routine.</li>
+                <li>Get help in case of a skin emergency.</li>
+            </ul>
+            <button class="chatbot-button" onclick="window.location.href='https://huggingface.co/spaces/Bhaskar2611/AI_Dermatologist_Chatbot_'">Skin Bot</button>
+        </div>
+
+        <!-- Hair Page Content -->
+        <div id="hair" class="page-content hidden">
+            <h2>Hair Care Information</h2>
+            <ul>
+                <li>Get personalized hair care tips based on your hair type and concerns.</li>
+                <li>Learn about potential hair problems and their causes.</li>
+                <li>Get information about hair care products and compare them.</li>
+                <li>Get advice on building a good hair care routine.</li>
+                <li>Get help in case of a hair emergency (like severe hair loss or scalp infections).</li>
+            </ul>
+            <button class="chatbot-button" onclick="window.location.href='https://huggingface.co/spaces/Bhaskar2611/AI_Dermatologist_Chatbot_'">Hair Chatbot</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showContent(section) {
+            const skinContent = document.getElementById('skin');
+            const hairContent = document.getElementById('hair');
+            const title = document.getElementById('main-title');
+
+            if (section === 'skin') {
+                skinContent.classList.remove('hidden');
+                hairContent.classList.add('hidden');
+                title.innerText = 'AI Dermatologist - Skin';
+            } else if (section === 'hair') {
+                skinContent.classList.add('hidden');
+                hairContent.classList.remove('hidden');
+                title.innerText = 'AI Dermatologist - Hair';
+            }
+        }
+    </script>
+
 </body>
 </html>
