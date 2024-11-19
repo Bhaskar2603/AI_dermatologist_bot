@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #f0f8ff, #e6fffa);
-            overflow: hidden;
+            /* overflow: hidden; */
         }
 
         .container {
@@ -30,12 +30,19 @@
         }
 
         .page-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
             background-color: #ffffff;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
             animation: fadeIn 2s ease-in-out;
+        }
+
+        .text-section {
+            flex: 2;
+            text-align: left;
         }
 
         h2 {
@@ -46,7 +53,6 @@
         ul {
             list-style-type: none;
             padding: 0;
-            text-align: left;
             animation: fadeInUp 1.2s ease-in-out;
         }
 
@@ -65,6 +71,24 @@
             color: #2d6a4f;
             margin-right: 10px;
             font-size: 1.5rem;
+        }
+
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease;
+           
         }
 
         .chatbot-button {
@@ -193,34 +217,44 @@
         <button onclick="showContent('hair')">Hair</button>
     </div>
 
-    <!-- Container -->
+
     <div class="container">
         <h1 id="main-title">AI Dermatologist</h1>
 
-        <!-- Skin Page Content -->
+
         <div id="skin" class="page-content">
-            <h2>Skin Care Information</h2>
-            <ul>
-                <li>Get personalized skincare tips based on your skin type and concerns.</li>
-                <li>Learn about potential skin conditions and their causes.</li>
-                <li>Get information about skincare products and compare them.</li>
-                <li>Get advice on building a good skincare routine.</li>
-                <li>Get help in case of a skin emergency.</li>
-            </ul>
-            <button class="chatbot-button" onclick="window.location.href='https://huggingface.co/spaces/Bhaskar2611/skin_Bot'">Skin Bot</button>
+            <div class="text-section">
+                <h2>Skin Care Information</h2>
+                <ul>
+                    <li>Get personalized skincare tips based on your skin type and concerns.</li>
+                    <li>Learn about potential skin conditions and their causes.</li>
+                    <li>Get information about skincare products and compare them.</li>
+                    <li>Get advice on building a good skincare routine.</li>
+                    <li>Get help in case of a skin emergency.</li>
+                </ul>
+                <button class="chatbot-button" onclick="window.location.href='https://huggingface.co/spaces/Bhaskar2611/skin_Bot'">Skin Bot</button>
+            </div>
+            <div class="image-section">
+                <img src="img.jpg" alt="Skin Care">
+            </div>
         </div>
 
         <!-- Hair Page Content -->
         <div id="hair" class="page-content hidden">
-            <h2>Hair Care Information</h2>
-            <ul>
-                <li>Get personalized hair care tips based on your hair type and concerns.</li>
-                <li>Learn about potential hair problems and their causes.</li>
-                <li>Get information about hair care products and compare them.</li>
-                <li>Get advice on building a good hair care routine.</li>
-                <li>Get help in case of a hair emergency (like severe hair loss or scalp infections).</li>
-            </ul>
-            <button class="chatbot-button" onclick="window.location.href='https://huggingface.co/spaces/Bhaskar2611/Hair_bot'">Hair Bot</button>
+            <div class="text-section">
+                <h2>Hair Care Information</h2>
+                <ul>
+                    <li>Get personalized hair care tips based on your hair type and concerns.</li>
+                    <li>Learn about potential hair problems and their causes.</li>
+                    <li>Get information about hair care products and compare them.</li>
+                    <li>Get advice on building a good hair care routine.</li>
+                    <li>Get help in case of a hair emergency (like severe hair loss or scalp infections).</li>
+                </ul>
+                <button class="chatbot-button" onclick="window.location.href='https://huggingface.co/spaces/Bhaskar2611/Hair_bot'">Hair Bot</button>
+            </div>
+            <div class="image-section">
+                <img src="img.jpg" alt="Hair Care">
+            </div>
         </div>
     </div>
 
