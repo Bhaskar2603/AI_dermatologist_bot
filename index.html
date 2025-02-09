@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Dermatologist</title>
     <style>
-        /* Previous styles remain the same */
+        /* Previous styles remain unchanged */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -21,23 +21,48 @@
             animation: fadeIn 1.5s ease-in-out;
         }
 
-        /* Add new image styling */
+        .page-content {
+            display: flex;
+            gap: 30px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .text-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 400px;
+            height: 600px;
+        }
+
+        .text-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .info-image {
-            margin-top: 20px;
-            text-align: center;
+            flex: 1;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            max-height: 300px;
+            margin-top: 20px;
         }
 
         .info-image img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px;
         }
 
-        /* Rest of existing styles remain unchanged */
+        /* Rest of the styles remain same */
         /* ... */
     </style>
 </head>
@@ -52,17 +77,18 @@
 
         <div id="skin" class="page-content">
             <div class="text-section">
-                <h2>Skin Care Information</h2>
-                <ul>
-                    <li>Personalized skincare tips based on your skin type</li>
-                    <li>Identify potential skin conditions</li>
-                    <li>Compare skincare products</li>
-                    <li>Build optimal skincare routines</li>
-                    <li>Emergency skin care guidance</li>
-                </ul>
-                <!-- Added image below text -->
-                <div class="info-image">
-                    <img src="assets/img.jpg" alt="Skin Care Illustration">
+                <div class="text-content">
+                    <h2>Skin Care Information</h2>
+                    <ul>
+                        <li>Personalized skincare tips based on your skin type</li>
+                        <li>Identify potential skin conditions</li>
+                        <li>Compare skincare products</li>
+                        <li>Build optimal skincare routines</li>
+                        <li>Emergency skin care guidance</li>
+                    </ul>
+                    <div class="info-image">
+                        <img src="assets/img.jpg" alt="Skin Care Illustration">
+                    </div>
                 </div>
             </div>
             <div class="chatbot-container">
@@ -75,17 +101,18 @@
 
         <div id="hair" class="page-content hidden">
             <div class="text-section">
-                <h2>Hair Care Information</h2>
-                <ul>
-                    <li>Customized hair care recommendations</li>
-                    <li>Diagnose common hair problems</li>
-                    <li>Compare hair care products</li>
-                    <li>Create effective hair routines</li>
-                    <li>Emergency hair care solutions</li>
-                </ul>
-                <!-- Added image below text -->
-                <div class="info-image">
-                    <img src="assets/img.jpg" alt="Hair Care Illustration">
+                <div class="text-content">
+                    <h2>Hair Care Information</h2>
+                    <ul>
+                        <li>Customized hair care recommendations</li>
+                        <li>Diagnose common hair problems</li>
+                        <li>Compare hair care products</li>
+                        <li>Create effective hair routines</li>
+                        <li>Emergency hair care solutions</li>
+                    </ul>
+                    <div class="info-image">
+                        <img src="assets/img.jpg" alt="Hair Care Illustration">
+                    </div>
                 </div>
             </div>
             <div class="chatbot-container">
@@ -98,7 +125,6 @@
     </div>
 
     <script>
-        // JavaScript remains the same
         function showContent(section) {
             document.querySelectorAll('.page-content').forEach(el => el.classList.add('hidden'));
             document.getElementById(section).classList.remove('hidden');
