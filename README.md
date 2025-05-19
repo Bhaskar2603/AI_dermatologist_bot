@@ -96,9 +96,9 @@ Users can switch between both chatbots on the website and interact naturally.
 
 ## 👨‍💻 Author
 
-**Bhaskar Jyothula**  
-B.Tech CSE (AI/ML) | VIT-AP  
-[LinkedIn](https://www.linkedin.com/in/bhaskarjyothula) • [Kaggle](https://www.kaggle.com/bhaskarjyothula)
+**Jyothula Bhaskar**  
+B.Tech in Computer Science & Engineering (AI & ML)  
+[LinkedIn](https://www.linkedin.com/in/bhaskar-jyothula-974bbb271/) | [Hugging Face](https://huggingface.co/Bhaskar2611) | [GitHub](https://github.com/Bhaskar2603) | [Kaggle](https://www.kaggle.com/bhaskarjyothula)
 
 ---
 
