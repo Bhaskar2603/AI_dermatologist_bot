@@ -1,6 +1,6 @@
 # 🧠 AI Dermatologist
 
-A deep learning-powered web application for diagnosing **skin** and **hair diseases**, integrated with intelligent chatbot assistants. This project combines CNN and MobileNet models with a user-friendly interface, allowing users to upload images and receive predictions. Two dedicated chatbots (fine-tuned Mistral-7B LLMs) assist users with personalized advice.
+A deep learning-powered web application for diagnosing **skin** and **hair diseases**, integrated with intelligent chatbot assistants. This project combines CNN and MobileNet models with a user-friendly interface, allowing users to upload images and receive predictions. Two dedicated chatbots (fine-tuned Mistral-7B LLMs) assist users with personalized advice. Check out: https://bhaskar2603.github.io/AI_dermatologist_bot/
 
 ---
 
