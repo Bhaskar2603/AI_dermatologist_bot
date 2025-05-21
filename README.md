@@ -69,7 +69,7 @@ A deep learning-powered web application for diagnosing **skin** and **hair disea
 
 ## 📁 Model Notebooks
 
-- 🧴 **Skin Disease Detection (Custom CNN)**: [View Notebook](https://www.kaggle.com/code/bhaskarjyothula/skin-things)
+- 🧴 **Skin Disease Detection (Custom CNN)**: [View Notebook](https://www.kaggle.com/code/bhaskarjyothula/skin-dis)
 - 💇‍♂️ **Hair Disease Detection (MobileNet)**: [View Notebook](https://www.kaggle.com/code/bhaskarjyothula/mobilenet-hair)
 
 ---
